@@ -6,19 +6,20 @@ public class Desarrolladores extends Trabajador {
 	int precioHora;
 	
 	public Desarrolladores(String nombre, int horas, int precioHora) {
-		super(nombre, horas, precioHora);
+		super(nombre);
 		this.hora = horas;
 		this.precioHora = precioHora;
 	}
 
 	@Override
 	public int obtenerSalario() {
-		super.setSalario(hora * precioHora);
-		return getSalario();
+		int salarioMin = super.getSalarioMinimo();
+		int salarioDesarrollador = salarioMin + (hora * precioHora);
+		return salarioDesarrollador;
 	}
 	
 	@Override
 	public String toString() {
-		return "Trabajador" + " Nombre: " + getNombre() + " Salario:" + (getSalario()+super.sueldoBase) ;
+		return "Desarrollador ->" + " Nombre: " + getNombre() + ". Salario:" + obtenerSalario();
 	}
 }
