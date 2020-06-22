@@ -2,7 +2,7 @@ package cl.jrios.ejercicio;
 
 public class Trabajador {
 
-	protected int salarioMinimo = 320000;
+	private Integer salarioMinimo = 320000;
 	private String nombre;
 
 	public Trabajador(String nombre) {
@@ -18,8 +18,7 @@ public class Trabajador {
 		this.nombre = nombre;
 	}
 
-	
-	public int getSalarioMinimo() {
+	public Integer getSalarioMinimo() {
 		return salarioMinimo;
 	}
 
@@ -28,7 +27,7 @@ public class Trabajador {
 		return "Trabajador: " + nombre + ".";
 	}
 	
-	public int obtenerSalario() {
+	public Integer obtenerSalario() {
 		return this.salarioMinimo;
     }
 }
